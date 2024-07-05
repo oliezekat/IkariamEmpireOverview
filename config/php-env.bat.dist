@@ -1,0 +1,11 @@
+@echo off
+rem Setup PHP directory for CLI & built-in server usages
+rem set php_dirpath=%project_dirpath%\var\php-8.3-nts-Win32-vs16-x64-latest
+rem Setup php.ini for CLI & built-in server usages (optional)
+rem set php_ini_filepath=%php_dirpath%\php.ini-development
+
+rem Setup built-in server (optional)
+rem set builtin_server_document_root=%project_dirpath%\public
+rem set builtin_server_host=localhost
+rem set builtin_server_port=80
+
