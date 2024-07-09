@@ -17,15 +17,28 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
 - Start your web server,
 - Open local host in any web browser.
 
-## ToDos
+## ToDos: for repository project
 - [x] Create dev environment
   - [x] setup CLI environment
   - [ ] try serve dev release with PHP built-in server
+  - [ ] service to manage dev release
 - [ ] batch to build release
+  - [ ] try use twig to render final js file
   - [ ] meta template
   - [ ] dev release with require of main.js
   - [ ] GreasyFork release for [webhook](https://greasyfork.org/fr/users/webhook-info)
-- [ ] fix meta
-  - [ ] namespace
-- [ ] fix for Firefox
-  - [ ] list console errors
+
+## ToDos: fixes for userscript
+### Any browser or scripts manager
+- [ ] meta namespace more specific
+- [ ] meta includes & excludes without regexp
+- [ ] meta author formatted https://sourceforge.net/p/greasemonkey/wiki/Metadata_Block/#author
+- [ ] not fetch corruption value from town hall (while revolution)
+- [ ] lost transports data (while show army advisor view)
+- [ ] don't support Pluton deity bonus
+- [ ] sometime lost satisfaction (cause unknown)
+### Firefox
+- [ ] analyze to do
+### Chrome
+- nothing specific known
+
