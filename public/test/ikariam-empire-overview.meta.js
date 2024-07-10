@@ -5,7 +5,6 @@
 // @description          Fork of Empire Overview by MrFix to fix it under Firefox
 // @description:en       Fork of Empire Overview by MrFix to fix it under Firefox
 // @namespace            ikariam.gameforge.com
-//
 // @grant                unsafeWindow
 // @grant                GM_getValue
 // @grant                GM_setValue
@@ -27,7 +26,4 @@
 // @version              1
 //
 // @license              GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
-// @icon                 https://www.google.com/s2/favicons?domain=ikariam.com
-// @downloadURL          http://localhost/test/ikariam-empire-overview.user.js
-// @updateURL            http://localhost/test/ikariam-empire-overview.meta.js
 // ==/UserScript==
