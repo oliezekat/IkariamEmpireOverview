@@ -25,11 +25,14 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
     - see "sandbox" branch,  
     - [x] test with static file, seem OK ;
       - need disable Firefox AdBlock (uBlock Origin),
-      - [ ] test with require main.js,
+      - [x] test with require main.js,
+        - Tampermonkey keep cached required files
       - [ ] test live updating,
+        - need to serve meta.js rendered with PHP to push new version number related to files modification,
   - [ ] service to manage dev release
 - [ ] batch to build release ;
   - [ ] try use twig to render final js file,
+    - [ ] batch & environment to use composer
   - [ ] meta template,
   - [ ] dev release with require of main.js,
   - [ ] GreasyFork release for [webhook](https://greasyfork.org/fr/users/webhook-info).
@@ -46,7 +49,8 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
 - [ ] lost transports data (while show army advisor view),
 - [ ] don't support Pluton deity bonus,
 - [ ] sometime lost satisfaction (cause unknown),
-- [ ] missing or wrong french translation.
+- [ ] missing or wrong french translation,
+- [ ] wrong unit training remained time.
 
 ### Firefox
 - [x] analyze in progress...
