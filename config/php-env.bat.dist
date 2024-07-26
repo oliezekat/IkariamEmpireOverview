@@ -1,8 +1,25 @@
 @echo off
-rem Setup PHP directory for CLI & built-in server usages
-rem set php_dirpath=%project_dirpath%\var\php-8.3-nts-Win32-vs16-x64-latest
+rem Setup PHP parameters for local CLI & built-in server usages
+
+rem Setup PHP directory for CLI & built-in server usages (required)
+set php_dirpath=%project_dirpath%\var\php-8.3-nts-Win32-vs16-x64-latest
+
 rem Setup php.ini for CLI & built-in server usages (optional)
 rem set php_ini_filepath=%php_dirpath%\php.ini-development
+
+rem Setup PHP extensions directory path (optional)
+rem set php_extensions_dirpath=%php_dirpath%\ext
+
+rem Setup Curl PHP's extension name to load (optional)
+rem set php_extension_curl_name=curl
+rem set php_extension_curl_cainfo=%project_dirpath%\var\certs\curl-ca-bundle.pem
+
+rem Setup OpenSSL PHP's extension name to load (optional)
+rem set php_extension_openssl_name=openssl
+rem set php_extension_openssl_cafile=%project_dirpath%\var\certs\curl-ca-bundle.pem
+
+rem Setup Zip PHP's extension name to load (optional)
+rem set php_extension_zip_name=zip
 
 rem Setup built-in server (optional)
 rem set builtin_server_document_root=%project_dirpath%\public

@@ -8,15 +8,21 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
 
 ### For developers or contributors
 - Retrieve and clone this repository on your desktop,
-- Set your desktop local web server to "public" directory ;
-  - Set your PHP environment in "config\php-env.bat",
-  - See "config\php-env.bat.dist" as template,
-- Or create dedicated local web server with PHP for Windows ;
+- Install PHP for Windows ;
   - Open 'cmd' terminal from your repository clone,
   - Call "bin\get-php",
-- Start your local web server,
-  - or call "bin\php-server",
-- Open local host in any web browser.
+- Or setup your PHP environment manually ;
+  - Create "config\php-env.bat" file ;
+    - See "config\php-env.bat.dist" as template,
+    - OpenSSL extension required for Composer,
+    - Call "bin\get-ca-bundle" to obtain root certificates for Curl & OpenSSL,
+  - Call "bin\env" to check your configuration,
+  - Install Composer ;
+    - Call "bin\get-composer",
+    - Call "composer install", 
+- Start PHP built-in web server,
+  - Call "bin\php-server",
+-   Open ["http://localhost/"](http://localhost/) in any web browser.
 
 ## ToDos: for repository project
 - [x] Create dev environment ;
@@ -32,7 +38,7 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
   - [ ] service to manage dev release
 - [ ] batch to build release ;
   - [ ] try use twig to render final js file,
-    - [ ] batch & environment to use composer
+    - [x] batch & environment to use composer
   - [ ] meta template,
   - [ ] dev release with require of main.js,
   - [ ] GreasyFork release for [webhook](https://greasyfork.org/fr/users/webhook-info).
@@ -50,7 +56,9 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
 - [ ] don't support Pluton deity bonus,
 - [ ] sometime lost satisfaction (cause unknown),
 - [ ] missing or wrong french translation,
-- [ ] wrong unit training remained time.
+- [ ] wrong unit training remained time,
+- [ ] restore standard window.console,
+  - Ikariam replace it with badly shim.
 
 ### Firefox
 - [x] analyze in progress...
