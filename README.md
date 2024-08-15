@@ -16,10 +16,10 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
     - See "config\php-env.bat.dist" as template,
     - OpenSSL extension required for Composer,
     - Call "bin\get-ca-bundle" to obtain root certificates for Curl & OpenSSL,
-  - Call "bin\env" to check your configuration,
+  - Call "bin\env -vv" to check your configuration,
   - Install Composer ;
     - Call "bin\get-composer",
-    - Call "composer install", 
+    - Or call manually "composer install", 
 - Start PHP built-in web server,
   - Call "bin\php-server",
 -   Open ["http://localhost/"](http://localhost/) in any web browser.
@@ -33,14 +33,18 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
       - need disable Firefox AdBlock (uBlock Origin),
       - [x] test with require main.js,
         - Tampermonkey keep cached required files
-      - [ ] test live updating,
-        - need to serve meta.js rendered with PHP to push new version number related to files modification,
-  - [ ] service to manage dev release
-- [ ] batch to build release ;
-  - [ ] try use twig to render final js file,
-    - [x] batch & environment to use composer
-  - [ ] meta template,
-  - [ ] dev release with require of main.js,
+    - [ ] test live updating ;
+      - [x] need to serve meta.js rendered with PHP to push new version number related to files modification,
+      - [x] dev release with require of main.js,      
+      - [ ] try use twig to render js files,
+      - [ ] find a way to split main.js (with import, include, or twig),
+  - [ ] services to manage dev release ;
+    - [ ] service for /public routing,
+    - [ ] service to manage userscript sources files (js, twig, etc),
+    - [ ] service to render versioned js content,
+- [ ] batch to build releases ;
+  - [x] batch & environment to use composer,
+  - [ ] PHP CLI commands controler,
   - [ ] GreasyFork release for [webhook](https://greasyfork.org/fr/users/webhook-info).
 
 ## ToDos: fixes for userscript
@@ -58,10 +62,11 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
 - [ ] missing or wrong french translation,
 - [ ] wrong unit training remained time,
 - [ ] restore standard window.console,
-  - Ikariam replace it with badly shim.
+  - Ikariam replace it with badly shim,
+- [ ] retry & analyze issues with Grease Monkey.
 
 ### Firefox
-- [x] analyze in progress...
+- [] analyze in progress ;
   - fetch cities list, seem ok,
   - fetch city buildings and levels, seem ok,
   - fetch cities resources, seem ok,

@@ -84,7 +84,7 @@ rem Report PHP configuration
 :ReportPhpConfig
 powershell write-host -fore DarkBlue 'Check PHP requirements... ' -NoNewline
 if exist "%env_errors_log_filepath%" goto ReportPhpConfigWrong
-powershell write-host -fore DarkGreen 'OK'
+powershell write-host -fore DarkGreen 'OK.'
 if "%~1" == "-vv" goto ReportFullPhpConfig
 goto CheckComposer
 
