@@ -1,2 +1,2 @@
 <?php
-phpinfo();
+exit("It's works!");

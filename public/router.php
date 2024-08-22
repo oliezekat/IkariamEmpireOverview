@@ -1,10 +1,12 @@
 <?php
+require_once(implode(DIRECTORY_SEPARATOR, array(__DIR__, 'autoload.inc.php')));
+
 if (php_sapi_name() === "cli") {
     error_log(sprintf('Script "%s" not for CLI purpose.', $_SERVER['PHP_SELF']), 0);
     exit(1);
 }
 if (php_sapi_name() !== 'cli-server') {
-    // todo support apache
+    // todo: support Apache
 }
 $request_path = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $script_path = $_SERVER['DOCUMENT_ROOT'];
@@ -26,7 +28,6 @@ if (is_dir($script_path) and file_exists($script_path)) {
     }
 } else {
     error_log(sprintf('Route "%s" not found.', $request_path), 0);
-    // todo error_log(sprintf('Route "%s" not found.', $_SERVER['SCRIPT_NAME']), 3, 'php://stderr');
     $script_path = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'index.php';
 }
 include_once($script_path);

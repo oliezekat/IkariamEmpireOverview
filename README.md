@@ -22,7 +22,7 @@ Fork of [MrFix's "Empire Overview"](https://greasyfork.org/fr/scripts/456297-emp
     - Or call manually "composer install", 
 - Start PHP built-in web server,
   - Call "bin\php-server",
--   Open ["http://localhost/"](http://localhost/) in any web browser.
+-   Open ["http://localhost/test/"](http://localhost/test/) in any web browser.
 
 ## ToDos: for repository project
 - [x] Create dev environment ;
