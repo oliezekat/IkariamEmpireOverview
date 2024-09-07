@@ -23,7 +23,7 @@ rem set php_extension_zip_name=zip
 
 rem Setup built-in server (optional)
 rem set builtin_server_document_root=%project_dirpath%\public
-rem set builtin_server_router_script=%builtin_server_document_root%\router.php
+rem set builtin_server_router_script=%builtin_server_document_root%\cli-server-router.php
 rem set builtin_server_host=localhost
 rem set builtin_server_port=80
 
