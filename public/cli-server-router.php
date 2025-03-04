@@ -1,4 +1,6 @@
 <?php
+require_once(implode(DIRECTORY_SEPARATOR, array(__DIR__, 'autoload.inc.php')));
+
 // disallow self script call from CLI
 if ('cli' === php_sapi_name()) {
     error_log(sprintf("Script \"%s\" not for CLI usage.", $_SERVER['PHP_SELF']), 0);
@@ -22,6 +24,7 @@ if (file_exists($script_path)) {
         $script_filename = basename($script_path);
         // let serve static file
         if ('php' !== strtolower(pathinfo($script_filename, PATHINFO_EXTENSION))) {
+            // todo CLI output
             return false;
         }
         // disallow request to PHP's script not named "index.php"
@@ -39,6 +42,7 @@ if (file_exists($script_path)) {
         // let serve directory's "index.html" as static file
         $index_html_path = $script_path . DIRECTORY_SEPARATOR . 'index.html';
         if (is_file($index_html_path) and file_exists($index_html_path)) {
+            // todo CLI output
             return false;
         }
         $index_php_path = $script_path . DIRECTORY_SEPARATOR . 'index.php';
@@ -77,7 +81,10 @@ if ('cli-server' === php_sapi_name()) {
         fwrite(
             fopen('php://stdout', 'w'),
             sprintf(
-                "Request \"%s\" managed by \"%s\".",
+                "[%s] [::%s]:%s Request \"%s\" managed by \"%s\".",
+                date('D M j H:i:s Y'),
+                'x',
+                getmypid(),
                 $request_uri_path,
                 str_replace($_SERVER['DOCUMENT_ROOT'], '', $script_path)
                 ) . PHP_EOL

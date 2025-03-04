@@ -25,7 +25,16 @@ class SlimErrorHandlerCli extends SlimErrorHandler
         parent::logError($error);
         if ('cli-server' === php_sapi_name()) {
             // CLI output
-            error_log($error . PHP_EOL, 3, 'php://stderr'); 
+            error_log(
+                sprintf(
+                    "[%s] [::%s]:%s %s",
+                    date('D M j H:i:s Y'),
+                    'x',
+                    getmypid(),
+                    $error
+                ) . PHP_EOL,
+                3,
+                'php://stderr'); 
         }
     }
 }
