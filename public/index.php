@@ -6,10 +6,11 @@ use Psr\Http\Message\ServerRequestInterface         as PsrHttpServerRequest;
 use Slim\Factory\AppFactory                         as SlimAppFactory;
 use Slim\Error\Renderers\PlainTextErrorRenderer     as SlimPlainTextErrorRenderer;
 use Slim\Handlers\ErrorHandler                      as SlimErrorHandler;
+use Slim\Exception\HttpException                    as SlimHttpException;
 
 class SlimLogErrorRendererFromRequest extends SlimPlainTextErrorRenderer
 {
-    public function __invoke(Throwable $exception, bool $displayErrorDetails): string
+    public function __invoke(SlimHttpException $exception, bool $displayErrorDetails): string
     {
         return sprintf(
             "Request \"%s\" returned \"%s\".",
